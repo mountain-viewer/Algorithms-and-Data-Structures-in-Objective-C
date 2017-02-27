@@ -28,16 +28,13 @@ int main(int argc, const char * argv[]) {
     [sorter shuffleData];
     CFTimeInterval finish = [sorter time];
     
-    NSLog(@"%f time elapsed", finish - start);
-    NSLog(@"Shuffled array: %@", [sorter data]);
+    NSLog(@"Shuffled array: %f time elapsed", finish - start);
     
     start = [sorter time];
     [sorter bubbleSort];
     finish = [sorter time];
     
-    NSLog(@"%f time elapsed", finish - start);
-    NSLog(@"Bubble-sorted array: %@", [sorter data]);
-    
+    NSLog(@"Bubble-sorted array: %f time elapsed", finish - start);
     
     [sorter shuffleData];
     
@@ -45,9 +42,7 @@ int main(int argc, const char * argv[]) {
     [sorter selectionSort];
     finish = [sorter time];
     
-    NSLog(@"%f time elapsed", finish - start);
-    NSLog(@"Selection-sorted array: %@", [sorter data]);
-    
+    NSLog(@"Selection-sorted array %f time elapsed", finish - start);
     
     [sorter shuffleData];
     
@@ -55,8 +50,31 @@ int main(int argc, const char * argv[]) {
     [sorter insertionSort];
     finish = [sorter time];
     
-    NSLog(@"%f time elapsed", finish - start);
-    NSLog(@"Insertion-sorted array: %@", [sorter data]);
+    NSLog(@"Insertion-sorted array %f time elapsed", finish - start);
+    
+    [sorter shuffleData];
+    
+    start = [sorter time];
+    [sorter mergeSort];
+    finish = [sorter time];
+    
+    NSLog(@"Merge-sorted array %f time elapsed", finish - start);
+    
+    [sorter shuffleData];
+    
+    start = [sorter time];
+    [sorter quickSort];
+    finish = [sorter time];
+    
+    NSLog(@"Quick-sorted array %f time elapsed", finish - start);
+    
+    [sorter shuffleData];
+    
+    start = [sorter time];
+    [sorter heapSort];
+    finish = [sorter time];
+    
+    NSLog(@"Heap-sorted array %f time elapsed", finish - start);
   }
   return 0;
 }
