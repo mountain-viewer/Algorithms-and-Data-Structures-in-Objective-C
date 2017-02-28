@@ -12,6 +12,8 @@
   NSMutableArray *_data;
 }
 
+- (instancetype) initWithData: (NSMutableArray *) data;
+- (NSString *) description;
 - (void) setData: (NSMutableArray *) data;
 - (NSMutableArray *) data;
 - (void) shuffleData;

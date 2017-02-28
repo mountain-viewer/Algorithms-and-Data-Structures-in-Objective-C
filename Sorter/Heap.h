@@ -16,5 +16,6 @@
 - (id) extractMinimum;
 - (void) setTree: (NSMutableArray *) array;
 - (NSMutableArray *) tree;
+- (NSString *) description;
 
 @end

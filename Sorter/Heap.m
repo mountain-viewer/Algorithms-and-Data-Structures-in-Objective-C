@@ -10,6 +10,10 @@
 
 @implementation Heap
 
+- (NSString *) description {
+  return [[NSString alloc] initWithFormat: @"Heap of size %d", (int)[_tree count]];
+}
+
 - (void) siftDown {
   int current_idx = 0;
   

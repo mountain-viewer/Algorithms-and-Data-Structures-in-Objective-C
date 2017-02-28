@@ -14,6 +14,21 @@
 
 @implementation Sorter
 
+- (NSString *) description {
+  return [[NSString alloc] initWithFormat: @"The sorter instance holds %@ data array", _data];
+}
+
+- (instancetype) initWithData:(NSMutableArray *)data {
+  self = [super init];
+  
+  
+  if (self) {
+    _data = data;
+  }
+  
+  return self;
+}
+
 - (void) setData:(NSMutableArray *)data {
   _data = data;
 }
