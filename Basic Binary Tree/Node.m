@@ -30,6 +30,7 @@
       [_left insertElement: value];
     } else {
       _left = [[Node alloc] initWithValue: value];
+      _left.parent = self;
     }
   }
   
@@ -38,6 +39,7 @@
       [_right insertElement: value];
     } else {
       _right = [[Node alloc] initWithValue: value];
+      _right.parent = self;
     }
   }
 }

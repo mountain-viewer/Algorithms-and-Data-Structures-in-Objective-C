@@ -20,6 +20,6 @@
 
 @property (nonatomic, readonly, strong) Node *left;
 @property (nonatomic, readonly, strong) Node *right;
-@property (nonatomic, readonly, weak) Node *parent;
+@property (nonatomic, weak) Node *parent;
 
 @end
